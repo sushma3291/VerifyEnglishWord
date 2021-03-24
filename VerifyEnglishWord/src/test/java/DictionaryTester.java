@@ -74,16 +74,16 @@ public class DictionaryTester {
     }
 
     @Test
-    public void validatePapiWord() {
-        when(dictService.isEnglishWord("PAPI")).thenReturn(isThisEnglish("PAPI"));
-        Assert.assertTrue(dictionary.isEnglishWord("PAPI"));
+    public void validateSushmaWord() {
+        when(dictService.isEnglishWord("Sushma")).thenReturn(isThisEnglish("Sushma"));
+        Assert.assertTrue(dictionary.isEnglishWord("Sushma"));
     }
 
     @Test
-    public void validateNoWord() {
-        when(dictService.isEnglishWord("NO")).thenReturn(isThisEnglish("NO"));
-        Assert.assertTrue(dictionary.isEnglishWord("NO"));
-        Assert.assertEquals(Arrays.asList("n", "no", "o", "on"),(dictionary.findPossibleWords("NO")));
+    public void validateToWord() {
+        when(dictService.isEnglishWord("TO")).thenReturn(isThisEnglish("TO"));
+        Assert.assertTrue(dictionary.isEnglishWord("TO"));
+        Assert.assertEquals(Arrays.asList("o", "ot", "t", "to"),(dictionary.findPossibleWords("TO")));
     }
 
     @Test
